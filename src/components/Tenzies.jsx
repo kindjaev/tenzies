@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { nanoid } from "nanoid"
-import Confetti from "react-confetti"
+import runFireworks from '../lib/runFireworks'
 import Die from "./Die"
 // import getTime from "./timer"
 
@@ -141,7 +141,7 @@ const Tenzies = () => {
 
     return ( 
         <main>
-            {tenzies && <Confetti />}
+            {tenzies && runFireworks()}
             <h1 className="title">Tenzies</h1>
             {tenzies ? finish : play}
             
